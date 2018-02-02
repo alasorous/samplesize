@@ -1,0 +1,10 @@
+Package: samplesize
+Type: Package
+Title: Sample size calculations for continuous, binary, count and survival data
+Version: 0.1.0
+Author: Alex Godwood
+Maintainer: Alex Godwoood <alex.godwood@heptares.com>
+Description: Sample size calculations for continuous, binary, count and survival data
+License: CC0
+Encoding: UTF-8
+LazyData: true
