@@ -7,7 +7,7 @@
 ##
 ####################################################
 
-## Includes continuity correction
+## Includes continuity correction - matches Table 9.9 of Julious
 
 prop.ss <- function(alpha, power, p1, p2, r){
   theCall <- match.call()
@@ -23,14 +23,4 @@ prop.ss <- function(alpha, power, p1, p2, r){
   return(res)
 }
 
-## Binary NI Julious 2012
 
-prop.ni <- function(alpha, power, p1, p2, d){
-  theCall <- match.call()
-  print(theCall)
-  za <- qnorm(1-alpha/2)
-  zb <- qnorm(power)
-  n <- ceiling(((za*sqrt(p1*(1-p1) + p2*(1-p2)) + zb*sqrt(p1*(1-p1) + p2*(1-p2)))^2)/(((p1-p2)-d)^2))
-  res <- data.frame(alpha, power, p1, p2, d, n1)
-  return(res)
-}
